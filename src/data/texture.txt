@@ -1,3 +1,0 @@
-background.tim
-font.tim
-particles.tim

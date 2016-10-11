@@ -272,7 +272,7 @@
     </BuildLog>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="core\datafile.asm">
+    <None Include="core\datafile.s">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Win32|Win32'">true</ExcludedFromBuild>
     </None>
     <CustomBuild Include="main.lk">
@@ -286,44 +286,15 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="core\cd.c" />
-    <ClCompile Include="core\controller.c" />
     <ClCompile Include="core\event_c.c" />
-    <ClCompile Include="core\font.c" />
-    <ClCompile Include="core\gsrep.c" />
     <ClCompile Include="core\init.c" />
     <ClCompile Include="core\main.c" />
-    <ClCompile Include="core\fsprt.c" />
     <ClCompile Include="core\protocol.c" />
-    <ClCompile Include="core\sound.c" />
-    <ClCompile Include="core\vram.c" />
-    <ClCompile Include="demo\bird.c" />
-    <ClCompile Include="demo\demo.c" />
-    <ClCompile Include="demo\model.c" />
-    <ClCompile Include="gte\gte.c" />
-    <ClCompile Include="gte\particle.c" />
-    <ClCompile Include="gte\render.c" />
-    <ClCompile Include="gte\tm2.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="core.h" />
-    <ClInclude Include="core\cd.h" />
     <ClInclude Include="core\common.h" />
-    <ClInclude Include="core\controller.h" />
-    <ClInclude Include="core\font.h" />
-    <ClInclude Include="core\fsprt.h" />
-    <ClInclude Include="core\gsrep.h" />
-    <ClInclude Include="core\prim.h" />
     <ClInclude Include="core\protocol.h" />
-    <ClInclude Include="core\sound.h" />
-    <ClInclude Include="core\vram.h" />
-    <ClInclude Include="demo\demo.h" />
-    <ClInclude Include="demo\model.h" />
-    <ClInclude Include="gte\gte.h" />
-    <ClInclude Include="gte\inline.h" />
-    <ClInclude Include="gte\particle.h" />
-    <ClInclude Include="gte\render.h" />
-    <ClInclude Include="gte\tm2.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />

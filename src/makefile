@@ -16,29 +16,24 @@ ASMOPTIONS = /l /o c+ /o an+ /zd /x
 LINKOPTS = /psx $(STRIP_SYM) /c /li $(RELMODE) /z /st /strip
 
 ## sources ##
-CORE_SRC	= main.c gsrep.c vram.c fsprt.c font.c controller.c cd.c sound.c
-3D_SRC		= gte.c render.c tm2.c particle.c
-DEMO_SRC	= demo.c model.c
-CORE_S		= datafile.asm
+CORE_SRC	= main.c event_c.c init.c protocol.c 
+CORE_S		= io.asm event.asm
+BOOT_S		= datafile.s
 
 ## objects ##
 CORE_OBJ	= $(patsubst %.c,	$(RELMODE)/%.obj,	${CORE_SRC}		)
-3D_OBJ		= $(patsubst %.c,	$(RELMODE)/%.obj,	${3D_SRC}		)
-DEMO_OBJ	= $(patsubst %.c,	$(RELMODE)/%.obj,	${DEMO_SRC}		)
 CORE_ASM	= $(patsubst %.asm,	$(RELMODE)/%.obj,	${CORE_S}		)
+BOOT_ASM	= $(patsubst %.s,	$(RELMODE)/%.obj,	${BOOT_S}		)
 
-ALL_OBJ = $(CORE_ASM) $(3D_OBJ) $(CORE_OBJ) $(DEMO_OBJ)
+ALL_OBJ = $(CORE_OBJ) $(CORE_ASM) $(BOOT_ASM)
 ## ------- ##
 
 ## compile directives ##
 $(RELMODE)/%.obj : core/%.c
 	$(CC) $(CCOPTIONS) $< -o $@
-$(RELMODE)/%.obj : gte/%.c
-	$(CC) $(CCOPTIONS) $< -o $@
-	$(GTEFIX) -b $@
-$(RELMODE)/%.obj : demo/%.c
-	$(CC) $(CCOPTIONS) $< -o $@
 $(RELMODE)/%.obj : core/%.asm
+	$(CC) $(CCOPTIONS) -c $< -o $@
+$(RELMODE)/%.obj : core/%.s
 	$(ASM) $(ASMOPTIONS) $<,$@
 ## ----------------- ##
 

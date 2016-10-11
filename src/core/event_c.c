@@ -19,7 +19,7 @@ void event0_sub()
 
 	// send bit stuff both to buffer and receiver
 	w->v0c = i;
-	receive = i;
+	*receive = i;
 	c = i & 0xFF;
 	for (bit = 0x80; bit; bit >>= 1)
 	{

@@ -20,23 +20,6 @@
 #include <LIBAPI.H>
 
 #include "core\common.h"
-#include "core\gsrep.h"
-#include "core\vram.h"
-#include "core\prim.h"
-#include "core\fsprt.h"
-#include "core\font.h"
-#include "core\controller.h"
-#include "core\cd.h"
-
-#include "gte\gte.h"
-#include "gte\inline.h"
-#include "gte\tm2.h"
-#include "gte\render.h"
-#include "gte\particle.h"
-
-#include "demo\model.h"
-#include "demo\demo.h"
-
 #include "core\protocol.h"
 
 #endif	// __CORE_H

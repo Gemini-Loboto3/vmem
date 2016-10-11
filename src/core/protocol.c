@@ -1,9 +1,11 @@
 #include "..\core.h"
 
-volatile u8 *receive = (volatile u8*)0x1f006010;	// (W) set to send stuff
-volatile u8 *bank = (volatile u8*)0x1f006030;		// (W) transmission status?
-volatile u8 *port = (volatile u8*)0x1f006038;		// (R) read data from flashes
-volatile WORK *w = (volatile WORK*)0x3db4;
+#if FAST_VARS
+u8 volatile *receive = (u8*)(u32)0x1f006010,	// (W) set to send stuff
+	*bank = (u8*)(u32)0x1f006030,				// (W) transmission status?
+	*port = (u8*)(u32)0x1f006038;				// (R) read data from flashes
+volatile WORK *w = (WORK*)(u32)0x3db4;
+#endif
 
 void reset_receive()
 {

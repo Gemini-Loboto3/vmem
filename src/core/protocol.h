@@ -25,10 +25,18 @@ typedef struct tagWork
 	u32 v38;
 } WORK;
 
+#define FAST_VARS	0
+
+#if FAST_VARS
 // hardware ports
-extern volatile u8 *receive, *bank, *port;
+extern u8 volatile *receive, *bank;
+extern u8 volatile *port;
 // internal variables from BIOS RAM
 extern volatile WORK *w;
+#else
+extern volatile u8 receive[], bank[], port[];
+extern WORK w[];
+#endif
 
 // receiver
 void reset_receive();

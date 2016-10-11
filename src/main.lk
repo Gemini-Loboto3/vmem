@@ -11,25 +11,6 @@ bss     group   bss                     ; main data group
 	section .bss,bss
 
 	; core
-	include	main.obj
-	include gsrep.obj
-	include vram.obj
-	include fsprt.obj
-	include font.obj
-	include controller.obj
-	include cd.obj
-	include sound.obj
-	include datafile.obj
-
-	; gte
-	include gte.obj
-	include render.obj
-	include tm2.obj
-	include particle.obj
-
-	; demo
-	include demo.obj
-	include model.obj
 
 ; Use libsn.lib for development and None2.lib for child.
 	inclib	"c:\psxdev\lib\libapi.lib"

@@ -1,11 +1,43 @@
-	; bios set 1
-	.xref event00_main
+#include <r3000.h>
+#include <asm.h>
+
+#define r0	zero
+
+	.text
+	.set    noreorder
+
+	// bios set 1
+	.globl install_event00
+	.globl install_event01
+	.globl install_event02
+	/*.xref event00_main
 	.xref event01_main
-	.xref event02_main
-	; bios set 2
-	.xref event10_main
+	.xref event02_main*/
+	// bios set 2
+	.globl install_event10
+	.globl install_event11
+	.globl install_event12
+	/*.xref event10_main
 	.xref event11_main
-	.xref event12_main
+	.xref event12_main*/
+
+install_event00:
+	move t0, a0
+	la t1, jmp_event00
+	lw t2, 0(t1)
+	lw t3, 4(t1)
+	lw t4, 8(t1)
+	lw t5, 0xC(t1)
+	sw t2, 0(t0)
+	sw t3, 4(t0)
+	sw t4, 8(t0)
+	jr ra
+	sw t5, 0xC(t0)
+
+jmp_event00:
+	la t9, event00
+	jr t9
+	nop
 
 event00:
 	addiu   sp, -0x54
@@ -28,9 +60,9 @@ event00:
 	sw      t9, 0x50(sp)
 	jal     event00_main
 	nop
-	bltz    v0, @@else
+	bltz    v0, ELSE
 	lw      ra, 0x10(sp)
-	; --
+	// --
 	lw      v0, 0x14(sp)
 	lw      v1, 0x18(sp)
 	lw      a0, 0x1C(sp)
@@ -51,7 +83,7 @@ event00:
 	li      v0, 1
 	jr      ra
 	addiu   sp, 0x18
-@@else:
+ELSE:
 	lw      v0, 0x14(sp)
 	lw      v1, 0x18(sp)
 	lw      a0, 0x1C(sp)
@@ -69,12 +101,11 @@ event00:
 	lw      t8, 0x4C(sp)
 	lw      t9, 0x50(sp)
 	addiu   sp, 0x54
-	;
-	lw      v0, 0x7258(zero)
+	//
+	lw      v0, 0x7258(r0)
 	ori     t7, v1, 0x1003
 	sll     t8, a0, 2
-	li      t9, 0x3DB4
-	lw      t9, 0(t9)
+	lw      t9, 0x3DB4(r0)
 	nop
 	jr      t9
 	nop

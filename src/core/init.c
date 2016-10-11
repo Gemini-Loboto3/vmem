@@ -1,9 +1,5 @@
 #include "..\core.h"
 
-extern volatile u8 *receive;
-extern volatile u8 *bank;
-extern volatile WORK *w;
-
 u32 init_sub0()
 {
 	return 0;

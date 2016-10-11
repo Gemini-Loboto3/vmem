@@ -1,0 +1,46 @@
+	org     $80010000
+text    group                           ; main text group
+bss     group   bss                     ; main data group
+	section .rdata,text
+	section .text,text     	; main sections
+	section .ctors,text
+	section .dtors,text
+	section .data,text
+	section .sdata,text
+	section .sbss,bss
+	section .bss,bss
+
+	; core
+	include	main.obj
+	include gsrep.obj
+	include vram.obj
+	include fsprt.obj
+	include font.obj
+	include controller.obj
+	include cd.obj
+	include sound.obj
+	include datafile.obj
+
+	; gte
+	include gte.obj
+	include render.obj
+	include tm2.obj
+	include particle.obj
+
+	; demo
+	include demo.obj
+	include model.obj
+
+; Use libsn.lib for development and None2.lib for child.
+	inclib	"c:\psxdev\lib\libapi.lib"
+	inclib	"c:\psxdev\lib\libpad.lib"
+	inclib	"c:\psxdev\lib\libc.lib"
+	inclib	"c:\psxdev\lib\libc2.lib"
+	inclib	"c:\psxdev\lib\libgpu.lib"
+	inclib	"c:\psxdev\lib\libgte.lib"
+	inclib  "c:\psxdev\lib\libpress.lib"
+	inclib  "c:\psxdev\lib\libsn.lib"
+	inclib	"c:\psxdev\lib\libetc.lib"
+	inclib	"c:\psxdev\lib\libcd.lib"
+	inclib	"c:\psxdev\lib\libspu.lib"
+	regs	pc=__SN_ENTRY_POINT     ; entry point

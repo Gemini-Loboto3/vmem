@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="main.map" />
+    <None Include="core\datafile.asm">
+      <Filter>core</Filter>
+    </None>
+    <None Include="core\event.asm">
+      <Filter>core</Filter>
+    </None>
+    <None Include="core\io.asm">
+      <Filter>core</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{4133fe3b-3d4f-4fe5-b30f-40983aa937b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gte">
+      <UniqueIdentifier>{6cfd6d8b-8a79-40b8-9147-9f76f2e5e3d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="demo">
+      <UniqueIdentifier>{a168b701-ab3f-415c-a982-100ce30a7c33}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\main.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\gsrep.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\fsprt.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\vram.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\font.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="gte\tm2.c">
+      <Filter>gte</Filter>
+    </ClCompile>
+    <ClCompile Include="gte\gte.c">
+      <Filter>gte</Filter>
+    </ClCompile>
+    <ClCompile Include="gte\render.c">
+      <Filter>gte</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\model.c">
+      <Filter>demo</Filter>
+    </ClCompile>
+    <ClCompile Include="core\controller.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\demo.c">
+      <Filter>demo</Filter>
+    </ClCompile>
+    <ClCompile Include="gte\particle.c">
+      <Filter>gte</Filter>
+    </ClCompile>
+    <ClCompile Include="core\cd.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\sound.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="demo\bird.c">
+      <Filter>demo</Filter>
+    </ClCompile>
+    <ClCompile Include="core\protocol.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\init.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\event_c.c">
+      <Filter>core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core\common.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core.h" />
+    <ClInclude Include="core\gsrep.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\prim.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\fsprt.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\vram.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\font.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="gte\gte.h">
+      <Filter>gte</Filter>
+    </ClInclude>
+    <ClInclude Include="gte\tm2.h">
+      <Filter>gte</Filter>
+    </ClInclude>
+    <ClInclude Include="gte\inline.h">
+      <Filter>gte</Filter>
+    </ClInclude>
+    <ClInclude Include="gte\render.h">
+      <Filter>gte</Filter>
+    </ClInclude>
+    <ClInclude Include="demo\model.h">
+      <Filter>demo</Filter>
+    </ClInclude>
+    <ClInclude Include="core\controller.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="demo\demo.h">
+      <Filter>demo</Filter>
+    </ClInclude>
+    <ClInclude Include="core\cd.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\sound.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="gte\particle.h">
+      <Filter>gte</Filter>
+    </ClInclude>
+    <ClInclude Include="core\protocol.h">
+      <Filter>core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="main.lk" />
+    <CustomBuild Include="makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,60 @@
+Functions never called at all:
+------------------------------
+DEBUG\font.obj: function Font_set_sprt (size 184)
+DEBUG\font.obj: function Font_disp (size 280)
+DEBUG\controller.obj: function Vibrate (size 72)
+DEBUG\datafile.obj: function Reboot (size 8)
+DEBUG\gte.obj: function Gte_set_ambient (size 52)
+DEBUG\gte.obj: function Gte_upd_ambient (size 40)
+DEBUG\gte.obj: function Gte_set_fog_color (size 52)
+DEBUG\gte.obj: function Gte_upd_fog_color (size 40)
+DEBUG\gte.obj: function Gte_set_fog_ranges (size 48)
+DEBUG\gte.obj: function Gte_upd_fog_ranges (size 52)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function SetGraphQueue (size 164)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function DrawSyncCallback (size 96)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function ClearImage2 (size 152)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function MoveImage (size 184)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function ClearOTag (size 200)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function DrawPrim (size 92)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function DrawOTagEnv (size 216)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function GetDrawEnv (size 52)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function GetDispEnv (size 52)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function GetODE (size 48)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function SetDrawArea (size 128)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function SetDrawOffset (size 64)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function LoadImage2 (size 236)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function StoreImage2 (size 236)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function MoveImage2 (size 324)
+c:\psxdev\lib\libgpu.lib(SYS.obj): function DrawOTag2 (size 252)
+c:\psxdev\lib\libetc.lib(INTR.obj): function VSyncCallback (size 52)
+c:\psxdev\lib\libetc.lib(INTR.obj): function VSyncCallbacks (size 48)
+c:\psxdev\lib\libetc.lib(INTR.obj): function StopCallback (size 48)
+c:\psxdev\lib\libetc.lib(INTR.obj): function RestartCallback (size 48)
+c:\psxdev\lib\libetc.lib(INTR.obj): function GetIntrMask (size 24)
+c:\psxdev\lib\libgte.lib(COR_03.obj): function csin_1 (size 160)
+c:\psxdev\lib\libpad.lib(PDMAIINI.obj): function PadStopCom (size 68)
+c:\psxdev\lib\libcd.lib(CDR_1.obj): function CdReadBreak (size 416)
+c:\psxdev\lib\libgte.lib(FOG_02.obj): function SetFogNearFar (size 272)
+c:\psxdev\lib\libcd.lib(BIOS_1.obj): function CD_vol (size 136)
+c:\psxdev\lib\libcd.lib(BIOS_1.obj): function CD_initintr (size 76)
+c:\psxdev\lib\libspu.lib(SPU.obj): function _spu_Fr_ (size 168)
+c:\psxdev\lib\libspu.lib(SPU.obj): function _spu_Fw (size 132)
+c:\psxdev\lib\libspu.lib(SPU.obj): function _spu_Fr (size 100)
+c:\psxdev\lib\libspu.lib(SPU.obj): function _spu_FsetRXXa (size 164)
+c:\psxdev\lib\libspu.lib(SPU.obj): function _spu_FgetRXXa (size 60)
+c:\psxdev\lib\libspu.lib(S_M_UTIL.obj): function _SpuIsInAllocateArea (size 128)
+c:\psxdev\lib\libgte.lib(REG03_14.obj): function SetDQA (size 16)
+c:\psxdev\lib\libgte.lib(REG03_15.obj): function SetDQB (size 16)
+
+Total uncalled size: 5456
+
+Functions referred to only by data:
+-----------------------------------
+c:\psxdev\lib\libpad.lib(PDRESRES.obj): function _padIsVsync (size 104)
+c:\psxdev\lib\libpad.lib(PDRESRES.obj): function _padIntPad (size 400)
+
+Total data-ref-only size: 504
+
+
+Total of totals: 5960
+

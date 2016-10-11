@@ -1,0 +1,9 @@
+﻿  "Configuration "DEBUG
+  "------------------------"
+  slink /psx  /c /li DEBUG /z /st /strip @main.lk,DEBUG/main.cpe,DEBUG/main.sym,main.map
+  
+  Completed in 0.02 seconds
+EXEC : warning : No INI file found - using command-line only.
+  cpe2psx DEBUG\main.cpe D:\ePSXe150\pSX\demo\main.psx
+  CPE2PSX v1.0 - a simple CPE to PS-X EXE converter (Gemini, 2012)
+  del DEBUG\main.cpe

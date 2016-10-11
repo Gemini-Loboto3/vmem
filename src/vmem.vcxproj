@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug 1.5|Itanium">
+      <Configuration>Debug 1.5</Configuration>
+      <Platform>Itanium</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug 1.5|Win32">
+      <Configuration>Debug 1.5</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Win32|Itanium">
+      <Configuration>Debug Win32</Configuration>
+      <Platform>Itanium</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Win32|Win32">
+      <Configuration>Debug Win32</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Itanium">
+      <Configuration>Debug</Configuration>
+      <Platform>Itanium</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release 1.5|Itanium">
+      <Configuration>Release 1.5</Configuration>
+      <Platform>Itanium</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release 1.5|Win32">
+      <Configuration>Release 1.5</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Itanium">
+      <Configuration>Release</Configuration>
+      <Platform>Itanium</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>program</ProjectName>
+    <ProjectGuid>{2C85FB6E-9392-4923-83F4-801643C32A78}</ProjectGuid>
+    <RootNamespace>cracktro</RootNamespace>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Itanium'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug Win32|Win32'">
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'">$(Configuration)\</IntDir>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pmake -e PLAT=_PSX -e RELMODE=DEBUG -e OUTFILE=main -e OPTIMIZE=2</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'">make -e PLAT=_PSX -e RELMODE=DEBUG -e OUTFILE=main -e OPTIMIZE=2</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pmake -e RELMODE=DEBUG rebuild</NMakeReBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'">make -e RELMODE=DEBUG rebuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">pmake -e RELMODE=DEBUG clean</NMakeCleanCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'">make -e RELMODE=DEBUG clean</NMakeCleanCommandLine>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main.cpe</NMakeOutput>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'">main.cpe</NMakeOutput>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DEBUG;_DEBUG;_PSX</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'">DEBUG;_DEBUG;_PSX</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\psxdev\include</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'">C:\psxdev\include</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    </NMakeForcedIncludes>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'" />
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    </NMakeAssemblySearchPath>
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'" />
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    </NMakeForcedUsingAssemblies>
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'">$(Configuration)\</IntDir>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pmake -e RELMODE=RELEASE -e STRIP=STRIP -e PLAT=_PSX -e OUTFILE=main -e OPTIMIZE=2</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'">make -e RELMODE=RELEASE -e STRIP=STRIP -e PLAT=_PSX -e OUTFILE=main -e OPTIMIZE=3</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pmake -e RELMODE=RELEASE rebuild</NMakeReBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'">make -e RELMODE=RELEASE rebuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">pmake -e RELMODE=RELEASE clean</NMakeCleanCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'">make -e RELMODE=RELEASE clean</NMakeCleanCommandLine>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main.cpe</NMakeOutput>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'">main.cpe</NMakeOutput>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;_NDEBUG;_PSX</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'">NDEBUG;_NDEBUG;_PSX</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\psxdev\include</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'">C:\psxdev\include</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    </NMakeForcedIncludes>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'" />
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    </NMakeAssemblySearchPath>
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'" />
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    </NMakeForcedUsingAssemblies>
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'" />
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(PATH)</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'">$(PATH)</ExecutablePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\psxdev\include;..;.</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'">C:\psxdev\include;..;.</IncludePath>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'" />
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'" />
+    <SourcePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <SourcePath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'" />
+    <ExcludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <ExcludePath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\psxdev\include;..;.</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'">C:\psxdev\include;..;.</IncludePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(PATH)</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'">$(PATH)</ExecutablePath>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'" />
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'" />
+    <SourcePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <SourcePath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'" />
+    <ExcludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <ExcludePath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug Win32|Win32'">$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug Win32|Win32'">C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">$(PATH)</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'">$(PATH)</ExecutablePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">C:\psxdev\include;..;.</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'">C:\psxdev\include;..;.</IncludePath>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'" />
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'" />
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'" />
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'" />
+    <SourcePath Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'" />
+    <SourcePath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'" />
+    <ExcludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'" />
+    <ExcludePath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'" />
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">pmake -e RELMODE=DEBUG -e PLAT=_PSX -e OUTFILE=main -e OPTIMIZE=2</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'">make -e RELMODE=DEBUG -e PLAT=_PSX -e OUTFILE=main -e OPTIMIZE=2</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">pmake -e RELMODE=DEBUG rebuild</NMakeReBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'">make -e RELMODE=DEBUG rebuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">pmake -e RELMODE=DEBUG clean</NMakeCleanCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'">make -e RELMODE=DEBUG clean</NMakeCleanCommandLine>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">main.cpe</NMakeOutput>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'">main.cpe</NMakeOutput>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">DEBUG;_DEBUG;_PSX</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'">DEBUG;_DEBUG;_PSX</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">C:\psxdev\include</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'">C:\psxdev\include</NMakeIncludeSearchPath>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">make -e RELMODE=RELEASE -e PLAT=_PSX -e OUTFILE=main -e OPTIMIZE=2</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Itanium'">make -e RELMODE=RELEASE -e PLAT=_PSX -e OUTFILE=main -e OPTIMIZE=2</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">make -e RELMODE=DEBUG rebuild</NMakeReBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Itanium'">make -e RELMODE=DEBUG rebuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">make -e RELMODE=DEBUG clean</NMakeCleanCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Itanium'">make -e RELMODE=DEBUG clean</NMakeCleanCommandLine>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">main.cpe</NMakeOutput>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Itanium'">main.cpe</NMakeOutput>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">_PSX</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Itanium'">_PSX</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">C:\psxdev\include</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Itanium'">C:\psxdev\include</NMakeIncludeSearchPath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">$(PATH)</ExecutablePath>
+    <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Itanium'">$(PATH)</ExecutablePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'">C:\psxdev\include;..;.</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Itanium'">C:\psxdev\include;..;.</IncludePath>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'" />
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Itanium'" />
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'" />
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Itanium'" />
+    <SourcePath Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'" />
+    <SourcePath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Itanium'" />
+    <ExcludePath Condition="'$(Configuration)|$(Platform)'=='Release|Itanium'" />
+    <ExcludePath Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Itanium'" />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32|Win32'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <BuildLog>
+      <Path>$(MSBuildProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Win32'">
+    <BuildLog>
+      <Path>$(MSBuildProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_WIN32</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Link>
+      <MapFileName>main.map</MapFileName>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Itanium'">
+    <BuildLog>
+      <Path>
+      </Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug 1.5|Itanium'">
+    <BuildLog>
+      <Path>
+      </Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <BuildLog>
+      <Path>$(MSBuildProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release 1.5|Win32'">
+    <BuildLog>
+      <Path>$(MSBuildProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="core\datafile.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug Win32|Win32'">true</ExcludedFromBuild>
+    </None>
+    <CustomBuild Include="main.lk">
+      <FileType>Script</FileType>
+    </CustomBuild>
+    <None Include="core\event.asm" />
+    <None Include="core\io.asm" />
+    <None Include="main.map" />
+    <CustomBuild Include="makefile">
+      <FileType>Makefile</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\cd.c" />
+    <ClCompile Include="core\controller.c" />
+    <ClCompile Include="core\event_c.c" />
+    <ClCompile Include="core\font.c" />
+    <ClCompile Include="core\gsrep.c" />
+    <ClCompile Include="core\init.c" />
+    <ClCompile Include="core\main.c" />
+    <ClCompile Include="core\fsprt.c" />
+    <ClCompile Include="core\protocol.c" />
+    <ClCompile Include="core\sound.c" />
+    <ClCompile Include="core\vram.c" />
+    <ClCompile Include="demo\bird.c" />
+    <ClCompile Include="demo\demo.c" />
+    <ClCompile Include="demo\model.c" />
+    <ClCompile Include="gte\gte.c" />
+    <ClCompile Include="gte\particle.c" />
+    <ClCompile Include="gte\render.c" />
+    <ClCompile Include="gte\tm2.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core.h" />
+    <ClInclude Include="core\cd.h" />
+    <ClInclude Include="core\common.h" />
+    <ClInclude Include="core\controller.h" />
+    <ClInclude Include="core\font.h" />
+    <ClInclude Include="core\fsprt.h" />
+    <ClInclude Include="core\gsrep.h" />
+    <ClInclude Include="core\prim.h" />
+    <ClInclude Include="core\protocol.h" />
+    <ClInclude Include="core\sound.h" />
+    <ClInclude Include="core\vram.h" />
+    <ClInclude Include="demo\demo.h" />
+    <ClInclude Include="demo\model.h" />
+    <ClInclude Include="gte\gte.h" />
+    <ClInclude Include="gte\inline.h" />
+    <ClInclude Include="gte\particle.h" />
+    <ClInclude Include="gte\render.h" />
+    <ClInclude Include="gte\tm2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -16,8 +16,8 @@ extern KERNEL k[];
 void install_exception()
 {
 	k->f0000[0] = 0xAC1A0038;	// sw k0, 0x38(0)
-	k->f0000[1] = 0x3C1A0000 | ((u32)Exception >> 16);	// li k0, Exception
-	k->f0000[2] = 0x275A0000 | ((u32)Exception & 0xFFFF);
+	k->f0000[1] = 0x3C1A0000 | ((const u32)Exception >> 16);	// li k0, Exception
+	k->f0000[2] = 0x275A0000 | ((const u32)Exception & 0xFFFF);
 	k->f0000[3] = 0x03400008;	// jr k0
 	k->f0000[4] = 0x00000000;	// nop
 }
@@ -51,8 +51,8 @@ void main()
 	// check bios version?
 	if (*(u32*)0x8D0 == 0xF00)
 	{
-		w->v0d = 1;
-		w->v0e = 1;
+		w->v0d = 5;
+		w->v0e = 23;
 		// event installation
 		install_event00(send_cmd(0x8FB696EE));
 		install_event01(send_cmd(0x8FB69BB2));

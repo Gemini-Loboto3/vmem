@@ -1,0 +1,6 @@
+*.obj
+/src/*.db
+/src/*.map
+/src/*.log
+/src/Debug/*.sym
+/src/statcov.txt

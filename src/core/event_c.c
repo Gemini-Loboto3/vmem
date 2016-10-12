@@ -9,7 +9,7 @@ void event0_sub()
 
 	for (i = 0; i < 16; i++)
 		w->v38 += buffer[i];
-	wait_blank();
+	wait_bank();
 
 	i = w->v0c & 0x30;
 	w->v0f = 0;
@@ -35,6 +35,9 @@ void event0_sub()
 
 void event0_nest()
 {
+	int b;
+	u32 bit;
+
 	if (w->v26 >= 0x32)
 	{
 		*(u32*)&w->v28 = w->v22;
@@ -42,18 +45,39 @@ void event0_nest()
 		event0_sub();
 		w->v26 -= 0x32;
 
-		return;
+		b = w->v0c & 0x30;
+
+		if (w->v10) b |= 2;
+		if (w->v11) b |= 4;
+		if (w->v12) b |= 8;
+
+		w->v0c = b;
+		*receive = b;
+		for (bit = 0x80; bit; bit >>= 1)
+		{
+			b &= 0x3B;
+			if (bit & 0x59) b |= 4;
+			b |= 2;
+			*receive = b;
+			b &= 0x3D;
+			*receive = b;
+			b >>= 1;
+		}
 	}
 
 	if (w->v22)
 	{
 		wait_bank();
 		w->v0f = 0;
-	}
-	else
-	{
 
+		w->v22--;
+		w->v0c = b;
+		*receive = b;
+		w->v26++;
+		w->v24++;
 	}
+	// 1F001F68
+	else wait_bank();
 }
 
 int event00_main(int par0, int par1, int par2, int par3)
@@ -163,10 +187,10 @@ int event01_main(int par0, int par1, int par2, int par3)
 		v7508 = ((int*)0x7508)[par3];
 		if (v7500 == 0x10) v7508 = 0x400;
 
-		sr = get_sr();
-		set_sr(sr & ~SR_IEC);	// disable interrupt
+		sr = get_SR();
+		set_SR(sr & ~SR_IEC);	// disable interrupt
 		event1_nest(v7508, v7550);
-		set_sr(sr);				// restore interrupt
+		set_SR(sr);				// restore interrupt
 
 		return 1;
 	}
@@ -201,10 +225,10 @@ int event02_main(int par0, int par1, int par2, int par3)
 		v7508 = ((int*)0x7508)[par2];
 		if (v7500 == 0x10) v7508 = 0x400;
 
-		sr = get_sr();
-		set_sr(sr & ~SR_IEC);	// disable interrupt
+		sr = get_SR();
+		set_SR(sr & ~SR_IEC);	// disable interrupt
 		event2_nest(v7508, v7550);
-		set_sr(sr);				// restore interrupt
+		set_SR(sr);				// restore interrupt
 
 		return 1;
 	}

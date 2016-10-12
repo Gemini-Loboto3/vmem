@@ -77,7 +77,7 @@ int init()
 // not sure really if it's for activation
 void activate()
 {
-	u32 r = get_reiceve() & ~0x40;
+	u32 r = get_receive() & ~0x40;
 	set_receive(r);
 	delay(1);
 	set_receive(r | 0x40);

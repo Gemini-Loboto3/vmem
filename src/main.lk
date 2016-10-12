@@ -11,6 +11,13 @@ bss     group   bss                     ; main data group
 	section .bss,bss
 
 	; core
+	include datafile.obj
+	include event_c.obj
+	include event.obj
+	include init.obj
+	include io.obj
+	include main.obj
+	include protocol.obj
 
 ; Use libsn.lib for development and None2.lib for child.
 	inclib	"c:\psxdev\lib\libapi.lib"

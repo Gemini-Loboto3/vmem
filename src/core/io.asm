@@ -5,6 +5,12 @@
 	.set    noreorder
 
 	.globl set_boot
+	.globl reset_DCIC
+	.globl get_SR
+	.globl set_SR
+	.globl get_Cause
+	.globl get_EPC
+	.globl init_cache
 
 // cop0 register aliases
 #define Wired		R3		// BPC - Breakpoint on execute (R/W)
@@ -68,11 +74,11 @@ get_EPC:
 	nop
 
 init_cache:
-	la t0, (init_cache_kuseg & 0xFFFFFFF) | 0xB0000000	// turn function to kuseg
+	la t0, init_cache_k1|0xA0000000	// address function as k1 memory
 	jr t0
 	nop
 
-init_cache_kuseg:
+init_cache_k1:
 	li t1, 0xFFFE0130
 	lw t3, 0(t1)
 	li t4, 0xFFFFFB7C
